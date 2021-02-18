@@ -16,3 +16,4 @@ RUN cp /autograder/source/run_autograder /autograder
 RUN chmod ugo+x /autograder/run_autograder
 
 RUN mkdir /autograder/submission
+RUN mkdir /autograder/results

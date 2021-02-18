@@ -10,8 +10,8 @@ docker: gs
 	docker build -t gs_test -f docker/Dockerfile .
 
 docker-run: docker
-	cp solution/calculator.c .
-	python3 docker/run_docker.py calculator.c
+	cp solution/calculator.py .
+	python3 docker/run_docker.py calculator.py
 	cat results/results.json | python3 -m json.tool
 
 help:
@@ -21,4 +21,3 @@ help:
 	@echo "make docker     -- builds a gradescope compatible docker image"
 	@echo "make docker-run -- runs the docker image to test it"
 	@echo
-	

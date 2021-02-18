@@ -39,7 +39,7 @@ def run_submission(sd, docker_image=DOCKER_IMAGE):
 
     try:
 
-        log = container.exec_run('mkdir /autograder/submission',
+        log = container.exec_run('mkdir -p /autograder/submission',
                                  stdout=True,
                                  stderr=True,
                                  stream=True)
